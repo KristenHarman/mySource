@@ -1,0 +1,19 @@
+<%- include('partials/header') -%>
+
+<h2>Your feed is empty.</h2>
+<div class="container col-6">
+    <div class="row justify-content-center mt-5">
+      <ul class="row list-unstyled">
+        <% for(var i=0; i<resources.length; i++) { %>
+          <li class="col-6 mt-5">
+            <a href="/resource/<%= resources[i]._id%>">
+              <h2><%= resources[i].title%></h2>
+            </a>
+            <h3><%= resources[i].description%></h3>
+            <h4><%= resources[i].subject%></h4>
+          </li>
+        <% } %>
+        </ul>
+    </div>
+  </div>  
+<%- include('partials/footer') -%>
