@@ -3,6 +3,7 @@
   <div class="row justify-content-center mt-5">
     <div class="col-6">
       <h2><%= resource.title %></h2>
+      <p><%= resource.description %></p>
       <div class="row justify-content-between">
         <form
           class="col-1"
@@ -23,9 +24,7 @@
         <%}%>
       </div>
     </div>
-    <div class="col-3 mt-5">
-      <p><%= resource.description %></p>
-    </div>
+
     <div class="mt-5">
       <h2>Add a comment</h2>
       <form action="/comment/createComment/<%=resource._id%>"  method="POST">

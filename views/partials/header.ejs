@@ -26,11 +26,46 @@
     <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
-    <header class="container">
-      <div class="text-center">
-        <h1 class=""><a href="/profile">MySource</a></h1>
-        <span>Your source to save and share learning resources!</span>
-      </div>
-    </header>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+     <div class="container">
+       <a class="navbar-brand" href="/">
+        <img class="logo" src="imgs/mySource.png" alt="MySource" width="150" height="150">
+       </a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+   <% if(!user){ %> 
+       <ul class="navbar-nav mr-auto">
+         <li class="nav-item">
+           <a class="nav-link active" href="/">Home</a>
+         </li>
+         <li class="nav-item">
+          <a class="nav-link" href="/signup">Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Log In</a>
+        </li>
+       </ul>
+   <% }else{ %> 
+       <ul class="navbar-nav mr-auto">
+         <li class="nav-item active">
+           <a class="nav-link" href="/">Home</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="/dashboard">Dashboard</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="/feed">Feed</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="/logout">Log Out</a>
+         </li>
+   <% } %>
+       </div>
+     </div>
+   </nav>
+ </header>
   </body>
 </html>
